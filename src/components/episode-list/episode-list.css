@@ -1,0 +1,78 @@
+
+ul {
+    padding-top: 133px;
+    margin-left: 75px;
+}
+
+div.div-index {
+    font-family: 'Lato-Black', sans-serif;
+    font-size: 25.5px;
+    width: 134px;
+}
+
+div.div-name {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 24.9px;
+    margin-top: 1px;
+    margin-bottom: 9.6px;
+    margin-left: 17px;
+}
+
+div.div-empty {
+    width: 134px;
+}
+
+div.div-air-date {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 19.9px;
+    color: #989898;
+    margin-bottom: 28px;
+    margin-left: 17px;
+}
+
+hr {
+    display: none;
+}
+
+div.row {
+    margin-right: 0;
+}
+
+
+/* xs */
+@media (max-width: 576px) {
+
+    ul {
+        padding-top: 56px;
+        margin-left: 24px;
+    }
+
+    li {
+        margin-bottom: 16px;
+    }
+
+    div.div-index {
+        font-size: 18.9px;
+        border: none !important;
+    }
+
+    div.div-name {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-bottom: 11px;
+        margin-left: 0;
+    }
+
+    div.div-air-date {
+        font-size: 15px;
+        margin-left: 0;
+        margin-bottom: 17px;
+    }
+
+    hr {
+        display: block;
+        width: 93%;
+        margin: 0 !important;
+    }
+
+}

@@ -2,6 +2,7 @@ import React from "react";
 import './episodes.css'
 import {useQuery} from "@apollo/client";
 import {GET_EPISODES} from "../../api/apiCall";
+import EpisodesList from "../../components/episode-list/episodes-list";
 
 const Episodes: React.FC = () => {
 
@@ -14,8 +15,8 @@ const Episodes: React.FC = () => {
     } else if (loading) {
         content = <p>Loading...</p>
     } else {
-        content= {data}
-        console.log(content)
+        content = <EpisodesList episodes={data.episodes.results} count={data.episodes.info.count}></EpisodesList>
+
     }
     return (
         <main className='d-grid'>
@@ -29,6 +30,7 @@ const Episodes: React.FC = () => {
                 <img src="/images/image.png" style={{maxWidth: '100%'}} alt='RickAndMortyImage'
                      className='img-fluid'/>
             </section>
+            {content}
         </main>
     )
 
