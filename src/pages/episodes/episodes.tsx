@@ -1,8 +1,22 @@
 import React from "react";
 import './episodes.css'
+import {useQuery} from "@apollo/client";
+import {GET_EPISODES} from "../../api/apiCall";
 
 const Episodes: React.FC = () => {
 
+    const {loading, error, data} = useQuery(GET_EPISODES, {
+        variables: {"episodes": {"episode": "S04"}}
+    })
+    let content;
+    if (error) {
+        content = <p>Error : {error.message}</p>
+    } else if (loading) {
+        content = <p>Loading...</p>
+    } else {
+        content= {data}
+        console.log(content)
+    }
     return (
         <main className='d-grid'>
             <section>
