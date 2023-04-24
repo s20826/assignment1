@@ -1,0 +1,25 @@
+header {
+    background-image: -webkit-linear-gradient(150deg, #00BDD4 50.4%, #DAED49 50%);
+    height: 95px;
+}
+
+p {
+    font-family: Lato-Black, sans-serif;
+    font-size: 35px;
+    padding-left: 65px;
+    padding-top: 12px;
+}
+/* sm */
+@media (max-width: 768px) {
+    header {
+        background: #DAED49;
+        height: 71px;
+    }
+
+    p {
+        font-size: 30px;
+        padding-left: 0;
+        padding-bottom: 0;
+        padding-top: 18px;
+    }
+}
